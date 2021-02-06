@@ -10,8 +10,8 @@ import Avatar from '@material-ui/core/Avatar';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    width: '100%',
-    maxWidth: 360,
+    width: '80%',
+    maxWidth: 720,
     backgroundColor: theme.palette.background.paper,
   },
 }));
@@ -21,9 +21,7 @@ const PlayerList = [
    { userID = 'Mark Li' },
    { userID = 'Jeffery Yu'},
    { userID = 'Howard Qu'},
-   { userID = 'Lorenzo Cao'},
-   
-
+   { userID = 'Lorenzo Cao'}
 ]
 
 export default function LeaderBoard(prop) {
