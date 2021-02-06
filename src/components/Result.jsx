@@ -123,7 +123,7 @@ export default function SimpleDialogDemo() {
 
   return (
     <div>
-      <Button className={classes.button} variant="outlined" color="primary" onClick={handleClickOpen}>
+      <Button variant="outlined" color="primary" onClick={handleClickOpen}>
         Submit Your Answer
       </Button>
       <SimpleDialog open={open} onClose={handleClose} />
