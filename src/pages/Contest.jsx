@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
+import Editor from '../components/Editor';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -26,9 +27,7 @@ export default () => {
         </Paper>
       </Grid>
       <Grid item xs={6}>
-        <Paper variant="outlined" square className={classes.paper}>
-          Code Editor
-        </Paper>
+        <Editor />
       </Grid>
       <Grid item xs={3}>
         <Paper variant="outlined" square className={classes.paper}>
