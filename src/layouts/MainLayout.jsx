@@ -6,6 +6,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import Result from '../components/Result';
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -24,6 +25,7 @@ const MainLayout = ({ children }) => {
         <CssBaseline />
         <Header />
         {children}
+        <Result />
         <Footer />
       </Box>
     </>
