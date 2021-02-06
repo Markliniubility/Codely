@@ -2,23 +2,18 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import Button from '@material-ui/core/Button';
-import IconButton from '@material-ui/core/IconButton';
-import Brightness2Icon from '@material-ui/icons/Brightness2';
-import InboxIcon from '@material-ui/icons/Inbox';
+import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles((theme) => ({
   appBar: {
-    borderBottom: 'solid 1px #D0D0D0',
+    marginTop: theme.spacing(32),
+    borderTop: 'solid 1px #D0D0D0',
+    alignItems: 'center',
   },
 
-  menuButton: {
+  textCaption: {
     marginRight: theme.spacing(2),
     textTransform: 'none',
-  },
-
-  spacing: {
-    flexGrow: 1,
   },
 }));
 
@@ -32,32 +27,33 @@ export default () => {
       className={classes.appBar}
     >
       <Toolbar variant="dense">
-        <Button
-          className={classes.menuButton}
+        <Typography
+          className={classes.textCaption}
+          variant="body2"
         >
-          Codely
-        </Button>
+          © 2021 Codely
+        </Typography>
 
-        <Button
-          className={classes.menuButton}
+        <Typography
+          className={classes.textCaption}
+          variant="body2"
         >
-          Dashboard
-        </Button>
+          Contact
+        </Typography>
 
-        <div className={classes.spacing} />
-
-        <IconButton>
-          <InboxIcon />
-        </IconButton>
-
-        <IconButton>
-          <Brightness2Icon />
-        </IconButton>
-        <Button
-          className={classes.menuButton}
+        <Typography
+          className={classes.textCaption}
+          variant="body2"
         >
-          Zepeng Yu
-        </Button>
+          Terms
+        </Typography>
+
+        <Typography
+          className={classes.textCaption}
+          variant="body2"
+        >
+          Privacy
+        </Typography>
       </Toolbar>
     </AppBar>
   );
