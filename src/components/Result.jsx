@@ -18,8 +18,10 @@ const useStyles = makeStyles((theme) => ({
   },
   avatar: {
     display: 'flex',
+    alignItems: 'center',
+    textAlign: 'bottom',
     '& > *': {
-      margin: theme.spacing(1),
+      margin: theme.spacing(1.5),
     },
   },
   content: {
@@ -33,12 +35,24 @@ const useStyles = makeStyles((theme) => ({
   button: {
     textTransform: 'none',
   },
+  left: {
+    display: 'flex',
+    justifyContent: 'left',
+  },
+  large: {
+    width: theme.spacing(7),
+    height: theme.spacing(7),
+  },
+  title: {
+    display: 'flex',
+    justifyContent: 'space-between',
+  },
 }));
 
 const BorderLinearProgress = withStyles((theme) => ({
   root: {
-    height: 10,
-    borderRadius: 5,
+    height: 15,
+    borderRadius: 7,
   },
   colorPrimary: {
     backgroundColor: theme.palette.grey[theme.palette.type === 'light' ? 200 : 700],
@@ -59,27 +73,33 @@ function SimpleDialog(props) {
 
   return (
     <Dialog onClose={handleClose} aria-labelledby="simple-dialog-title" open={open}>
-      <DialogTitle id="simple-dialog-title">Result</DialogTitle>
+      <div className={[classes.title, classes.avatar].join(' ')}>
+        <DialogTitle id="simple-dialog-title">Result</DialogTitle>
+        <Avatar className={classes.large} src={logo} />
+      </div>
       <DialogContent className={classes.content}>
         <Typography className={classes.result} variant="h1" color="primary"> VICTORY! </Typography>
         <br />
         <div className={classes.avatar}>
-          <Avatar src={logo} />
-          <Avatar src={diamond} />
+          <Avatar className={classes.large} src={diamond} />
+          <Typography variant="h6">
+            Diamond League
+          </Typography>
         </div>
-        <br />
         <BorderLinearProgress variant="determinate" value={length} />
         <br />
-        <Typography variant="body1">
-          Your Ranking is improved by:
+        <Typography className={classes.left} variant="body1">
+          Avarge Coding Speed:
           {' '}
-          {length * 2}
+          {length}
+          {' '}
+          characters per minute.
         </Typography>
-        <Typography variant="body1">
-          Your current rank is
+        <Typography className={classes.left} variant="body1">
+          Current Rank:
           {' '}
           {145 - length * 2}
-          th place in Diamond League.
+          th place.
         </Typography>
       </DialogContent>
       <DialogActions>
