@@ -62,10 +62,6 @@ function SimpleDialog(props) {
       <DialogTitle id="simple-dialog-title">Result</DialogTitle>
       <DialogContent className={classes.content}>
         <Typography className={classes.result} variant="h1" color="primary"> VICTORY! </Typography>
-        <Typography className={classes.result} variant="h1" color="primary">
-          {open}
-          {onClose}
-        </Typography>
         <br />
         <div className={classes.avatar}>
           <Avatar src={logo} />
