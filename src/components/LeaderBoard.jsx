@@ -37,7 +37,7 @@ export default function LeaderBoard(prop) {
                 src={`/static/images/avatar/${value + 1}.jpg`}
               />
             </ListItemAvatar>
-            <ListItemText  primary = {prop.userID + `${value + 1}`} />
+            <ListItemText  primary = {prop.userID + rank + `${value + 1}`} />
             <ListItemSecondaryAction>
               
             </ListItemSecondaryAction>
