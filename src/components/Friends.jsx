@@ -60,7 +60,6 @@ export default function Friends(prop) {
             </Button>
             </ListItem>
 
-            <Divider variant="inset" component="li" />
           </List>
         );
       })}
