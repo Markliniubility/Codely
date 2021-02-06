@@ -1,105 +1,98 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { makeStyles, withStyles  } from '@material-ui/core/styles';
+import { makeStyles, withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import Avatar from '@material-ui/core/Avatar';
 import Link from '@material-ui/core/Link';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemAvatar from '@material-ui/core/ListItemAvatar';
-import ListItemText from '@material-ui/core/ListItemText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import DialogActions from '@material-ui/core/DialogActions';
 import Dialog from '@material-ui/core/Dialog';
-import PersonIcon from '@material-ui/icons/Person';
-import AddIcon from '@material-ui/icons/Add';
 import Typography from '@material-ui/core/Typography';
-import { blue } from '@material-ui/core/colors';
-import { DialogContent, Icon } from '@material-ui/core';
+import { DialogContent } from '@material-ui/core';
 import LinearProgress from '@material-ui/core/LinearProgress';
-
+import logo from '../img/avatar.jpg';
+import diamond from '../img/diamond.png';
 
 const useStyles = makeStyles((theme) => ({
-    result: {
-        fontWeight: 'bold',
-    },
-    avatar: {
-        backgroundColor: blue[100],
-        color: blue[600],
-        marginBottom: theme.spacing(1)
-    },
-    content: {
-        margin: theme.spacing(4),
-        textAlign:'center',
-        fontSize: 'large',
-    },
-    pacing: {
-        flexGrow: 1,
-    },
-    button: {
-        textTransform: 'none',
-    }
+  result: {
+    fontWeight: 'bold',
+  },
+  avatar: {
+    display: 'flex',
+    margin: theme.spacing(1),
+  },
+  content: {
+    margin: theme.spacing(4),
+    textAlign: 'center',
+    fontSize: 'large',
+  },
+  pacing: {
+    flexGrow: 1,
+  },
+  button: {
+    textTransform: 'none',
+  },
 }));
 
-
 const BorderLinearProgress = withStyles((theme) => ({
-    root: {
-        height: 10,
-        borderRadius: 5,
-    },
-    colorPrimary: {
-        backgroundColor: theme.palette.grey[theme.palette.type === 'light' ? 200 : 700],
-    },
-    bar: {
-        borderRadius: 5,
-        backgroundColor: '#1a90ff',
-    },
+  root: {
+    height: 10,
+    borderRadius: 5,
+  },
+  colorPrimary: {
+    backgroundColor: theme.palette.grey[theme.palette.type === 'light' ? 200 : 700],
+  },
+  bar: {
+    borderRadius: 5,
+    backgroundColor: '#1a90ff',
+  },
 }))(LinearProgress);
 
 function SimpleDialog(props) {
   const classes = useStyles();
-  const { onClose, selectedValue, open } = props;
-  const [length, setLength] = useState(50);
+  const { onClose, open, length } = props;
 
   const handleClose = () => {
-    onClose(selectedValue);
+    onClose();
   };
-
-  const handleListItemClick = (value) => {
-    onClose(value);
-  };
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-        setLength(length => length < 70 ? length + 1 : length);
-    }, 100);
-    return () => clearInterval(interval);
-  }, []);
 
   return (
     <Dialog onClose={handleClose} aria-labelledby="simple-dialog-title" open={open}>
       <DialogTitle id="simple-dialog-title">Result</DialogTitle>
       <DialogContent className={classes.content}>
         <Typography className={classes.result} variant="h1" color="primary"> VICTORY! </Typography>
-        <br/>
-        <Avatar src="../../public/logo192.jpg">
-        </Avatar>
-        <br/>
+        <Typography className={classes.result} variant="h1" color="primary">
+          {open}
+          {onClose}
+        </Typography>
+        <br />
+        <div className={classes.avatar}>
+          <Avatar src={logo} />
+          <Avatar src={diamond} />
+        </div>
+        <br />
         <BorderLinearProgress variant="determinate" value={length} />
-        <br/>
-        <Typography variant="body1"> Your MMR: +{length * 10} </Typography>
-        <Typography variant="body1"> Your Rank: +{length * 2} </Typography>
+        <br />
         <Typography variant="body1">
-          <Link herf="https://leetcode.com/problems/two-sum/solution/" color="inherit"> View Solution </Link>
+          Your MMR: +
+          {length * 10}
+        </Typography>
+        <Typography variant="body1">
+          Your Rank: +
+          {length * 2}
+        </Typography>
+        <Typography variant="body1">
+          <Link to="https://leetcode.com/problems/two-sum/solution" color="inherit"> View Solution </Link>
         </Typography>
       </DialogContent>
       <DialogActions>
-        <Button className={classes.button} variant="contained" onClick={() => handleListItemClick()} color="primary">
+        <Button className={classes.button} variant="contained" onClick={handleClose} color="primary">
           Play Again
         </Button>
-        <Button className={classes.button} onClick={() => handleListItemClick()} color="primary">
+        <Button className={classes.button} onClick={handleClose} color="primary">
           Back
         </Button>
-    </DialogActions>
+      </DialogActions>
     </Dialog>
   );
 }
@@ -107,17 +100,26 @@ function SimpleDialog(props) {
 SimpleDialog.propTypes = {
   onClose: PropTypes.func.isRequired,
   open: PropTypes.bool.isRequired,
-  selectedValue: PropTypes.string.isRequired,
+  length: PropTypes.number.isRequired,
 };
 
 export default function SimpleDialogDemo() {
   const [open, setOpen] = React.useState(false);
+  const [length, setLength] = useState(30);
+
+  const moveBar = () => {
+    const interval = setInterval(() => {
+      setLength((len) => (len < 70 ? len + 1 : len));
+    }, 50);
+    return () => clearInterval(interval);
+  };
 
   const handleClickOpen = () => {
     setOpen(true);
+    moveBar();
   };
 
-  const handleClose = (value) => {
+  const handleClose = () => {
     setOpen(false);
   };
 
@@ -126,7 +128,7 @@ export default function SimpleDialogDemo() {
       <Button variant="outlined" color="primary" onClick={handleClickOpen}>
         Submit Your Answer
       </Button>
-      <SimpleDialog open={open} onClose={handleClose} />
+      <SimpleDialog open={open} onClose={handleClose} length={length} />
     </div>
   );
 }
