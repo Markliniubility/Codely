@@ -1,0 +1,40 @@
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import Paper from '@material-ui/core/Paper';
+import Grid from '@material-ui/core/Grid';
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    flexGrow: 1,
+  },
+
+  paper: {
+    padding: theme.spacing(2),
+    textAlign: 'center',
+    height: '100%',
+    color: theme.palette.text.secondary,
+  },
+}));
+
+export default () => {
+  const classes = useStyles();
+  return (
+    <Grid className={classes.root} container spacing={0}>
+      <Grid item xs={3}>
+        <Paper variant="outlined" square className={classes.paper}>
+          Problem Spec
+        </Paper>
+      </Grid>
+      <Grid item xs={6}>
+        <Paper variant="outlined" square className={classes.paper}>
+          Code Editor
+        </Paper>
+      </Grid>
+      <Grid item xs={3}>
+        <Paper variant="outlined" square className={classes.paper}>
+          Status
+        </Paper>
+      </Grid>
+    </Grid>
+  );
+};
