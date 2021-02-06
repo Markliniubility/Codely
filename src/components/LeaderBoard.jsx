@@ -7,6 +7,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import Avatar from '@material-ui/core/Avatar';
 import Typography from '@material-ui/core/Typography';
+import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -41,11 +42,13 @@ export default function LeaderBoard(prop) {
 
   return (<div>
           {
-            PlayerList.map(person=>{
+            PlayerList.map((person,index)=>{
               return <List className={classes.root}>
               <ListItem alignItems="flex-start">
               <ListItemAvatar>
+
                 <Avatar alt={person.userID} src={person.profileSrc} />
+                
               </ListItemAvatar>
               <ListItemText
                 primary= {person.userID}
@@ -63,6 +66,9 @@ export default function LeaderBoard(prop) {
                   </React.Fragment>
                 }
               />
+              <ListItemSecondaryAction>
+              <Typography>{index+1}</Typography>
+                </ListItemSecondaryAction>
             </ListItem>
             
             <Divider variant="inset" component="li" />
