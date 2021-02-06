@@ -80,7 +80,7 @@ export default function CustomizedDialogs() {
           <Typography gutterBottom>
             <p><b>Welcome to codely: a site where coding becomes fun!</b></p>
           </Typography>
-          <Typography gutterBottom>Codely provides a place for coders to compete and learn while having fun with online users and your friends! You can either:</Typography>
+          <Typography gutterBottom>Codely provides a place for coders to compete and learn while having fun with other coders! You can either:</Typography>
           <Typography gutterBottom> 1. Compete with matched users online </Typography>
           <Typography gutterBottom> 2. Compete with your friends </Typography>
           <Typography gutterBottom> You will be ranked! The only way to climb is to win the matches!</Typography>
