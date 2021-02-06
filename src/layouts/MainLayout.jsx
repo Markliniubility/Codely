@@ -25,6 +25,7 @@ const MainLayout = ({ children }) => {
         <CssBaseline />
         <Header />
         {children}
+        <Result />
         <Footer />
       </Box>
     </>
