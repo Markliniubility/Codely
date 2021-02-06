@@ -4,6 +4,8 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import Editor from '../components/Editor';
 
+import Problem from '../components/Problem';
+
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -11,7 +13,6 @@ const useStyles = makeStyles((theme) => ({
 
   paper: {
     padding: theme.spacing(2),
-    textAlign: 'center',
     height: '100%',
     color: theme.palette.text.secondary,
   },
@@ -23,7 +24,7 @@ export default () => {
     <Grid className={classes.root} container spacing={0}>
       <Grid item xs={3}>
         <Paper variant="outlined" square className={classes.paper}>
-          Problem Spec
+          <Problem />
         </Paper>
       </Grid>
       <Grid item xs={6}>
