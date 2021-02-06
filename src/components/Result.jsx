@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import Avatar from '@material-ui/core/Avatar';
-import Link from '@material-ui/core/Link';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import DialogActions from '@material-ui/core/DialogActions';
 import Dialog from '@material-ui/core/Dialog';
@@ -19,7 +18,9 @@ const useStyles = makeStyles((theme) => ({
   },
   avatar: {
     display: 'flex',
-    margin: theme.spacing(1),
+    '& > *': {
+      margin: theme.spacing(1),
+    },
   },
   content: {
     margin: theme.spacing(4),
@@ -74,20 +75,23 @@ function SimpleDialog(props) {
         <BorderLinearProgress variant="determinate" value={length} />
         <br />
         <Typography variant="body1">
-          Your MMR: +
-          {length * 10}
-        </Typography>
-        <Typography variant="body1">
-          Your Rank: +
+          Your Ranking is improved by:
+          {' '}
           {length * 2}
         </Typography>
         <Typography variant="body1">
-          <Link to="https://leetcode.com/problems/two-sum/solution" color="inherit"> View Solution </Link>
+          Your current rank is
+          {' '}
+          {145 - length * 2}
+          th place in Diamond League.
         </Typography>
       </DialogContent>
       <DialogActions>
         <Button className={classes.button} variant="contained" onClick={handleClose} color="primary">
           Play Again
+        </Button>
+        <Button className={classes.button} to="https://leetcode.com/problems/two-sum/solution" color="primary">
+          View Solution
         </Button>
         <Button className={classes.button} onClick={handleClose} color="primary">
           Back
