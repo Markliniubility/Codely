@@ -6,7 +6,7 @@ import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles((theme) => ({
   appBar: {
-    marginTop: theme.spacing(32),
+    marginTop: 'auto',
     borderTop: 'solid 1px #D0D0D0',
     alignItems: 'center',
   },
