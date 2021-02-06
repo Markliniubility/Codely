@@ -11,8 +11,7 @@ import Avatar from '@material-ui/core/Avatar';
 const useStyles = makeStyles((theme) => ({
   root: {
     width: '80%',
-    maxWidth: 720,
-    backgroundColor: theme.palette.background.paper,
+    backgroundColor: theme.palette.background.paper
   },
 }));
 
