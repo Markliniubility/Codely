@@ -48,7 +48,7 @@ export default function Friends(prop) {
                       className={person.inline}
                       color="textPrimary"
                     >
-                      Current ranking:
+                      Current ranking: 
                     </Typography>
                     {person.rankingStat}
                   </React.Fragment>
