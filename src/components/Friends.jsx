@@ -42,14 +42,6 @@ export default function Friends(prop) {
                 primary={person.userID}
                 secondary={
                   <React.Fragment>
-                    <Typography
-                      component="span"
-                      variant="body2"
-                      className={person.inline}
-                      color="textPrimary"
-                    >
-                      Current ranking: {' '}
-                    </Typography>
                     {person.rankingStat}
                   </React.Fragment>
                 }
