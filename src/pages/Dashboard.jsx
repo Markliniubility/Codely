@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
+import LeaderBoard from '../components/LeaderBoard';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -13,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
   paper: {
     padding: theme.spacing(2),
     textAlign: 'center',
-    height: '160px',
+    height: '',
     color: theme.palette.text.secondary,
   },
 }));
@@ -35,7 +36,7 @@ export default () => {
         </Grid>
         <Grid item xs={12}>
           <Paper variant="outlined" square className={classes.paper}>
-            Leader Board
+            <LeaderBoard />
           </Paper>
         </Grid>
       </Grid>
