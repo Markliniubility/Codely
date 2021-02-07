@@ -19,11 +19,11 @@ const useStyles = makeStyles((theme) => ({
 
   paper: {
     padding: theme.spacing(2),
-    height: '50px',
+    height: '150px',
     borderRight: '1px solid #D0D0D0',
     borderLeft: '1px solid #D0D0D0',
     color: theme.palette.text.secondary,
-    marginBottom: '20px',
+    backgroundColor: '#303030',
   },
 }));
 
@@ -69,14 +69,14 @@ export default () => {
 
   return (
     <Grid className={classes.root} container spacing={0}>
-      <Grid item xs={6}>
+      <Grid item xs={6} style={{'height': '150px'}}>
         <Paper square className={classes.paper}>
-          <CompareHeader name="Jeffrey Yu" time="15:17 🏆" avatar={avatar}/>
+          <CompareHeader name="Jeffrey Yu" score="93 🏆" runtime="37ms" time="15:17" memory="14239kb" avatar={avatar}/>
         </Paper>
       </Grid>
-      <Grid item xs={6}>
+      <Grid item xs={6} style={{'height': '150px'}}>
         <Paper square className={classes.paper}>
-          <CompareHeader name="Merlin" time="18:33" avatar={opponent}/>
+          <CompareHeader name="Merlin" score="86" runtime="42ms" time="18:33" memory="14398kb" avatar={opponent}/>
         </Paper>
       </Grid>
       <Grid item xs={6}>

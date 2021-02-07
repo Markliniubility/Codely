@@ -111,14 +111,14 @@ function SimpleDialog(props) {
         <Button className={classes.button} variant="contained" onClick={handleClose} color="primary">
           Play Again
         </Button>
-        <Link to="/solution">
-          <Button className={classes.button} variant="contained" color="primary">
-            View Solution
-          </Button>
-        </Link>
         <Link to="/compare">
           <Button className={classes.button} variant="contained" color="primary">
-            Compare with Opponent
+            Compare Solutions
+          </Button>
+        </Link>
+        <Link to="/solution">
+          <Button className={classes.button} variant="contained" color="primary">
+            View Answer
           </Button>
         </Link>
       </DialogActions>
