@@ -18,56 +18,67 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-
-export default function LeaderBoard(prop) {
+export default function LeaderBoard() {
   const classes = useStyles;
   const PlayerList = [
-    { userID : 'Shuming Xu',
-    profileSrc: "../dist/" ,
-    numMatches: 10},
-    { userID : 'Mark Li',
-    profileSrc: "../dist/" ,
-    numMatches: 13 },
-    { userID : 'Jeffery Yu',
-    profileSrc: "../dist/" ,
-    numMatches: 1},
-    { userID : 'Howard Qu',
-    profileSrc: "../dist/" ,
-    numMatches: 7},
-    { userID : 'Lorenzo Cao',
-    profileSrc: "../dist/" ,
-    numMatches: 33}
-  ]
+    {
+      userID: 'Shuming Xu',
+      profileSrc: '../dist/',
+      numMatches: 10,
+    },
+    {
+      userID: 'Mark Li',
+      profileSrc: '../dist/',
+      numMatches: 13,
+    },
+    {
+      userID: 'Jeffery Yu',
+      profileSrc: '../dist/',
+      numMatches: 1,
+    },
+    {
+      userID: 'Howard Qu',
+      profileSrc: '../dist/',
+      numMatches: 7,
+    },
+    {
+      userID: 'Lorenzo Cao',
+      profileSrc: '../dist/',
+      numMatches: 33,
+    },
+  ];
 
-  return (<div>
-          {
-            PlayerList.map(person=>{
-              return <List className={classes.root}>
-              <ListItem alignItems="flex-start">
-              <ListItemAvatar>
-                <Avatar alt={person.userID} src={person.profileSrc} />
-              </ListItemAvatar>
-              <ListItemText
-                primary= {person.userID}
-                secondary={
-                  <React.Fragment>
-                    <Typography
-                      component="span"
-                      variant="body2"
-                      className={person.inline}
-                      color="textPrimary"
-                    >
-                      Number of Matches
-                    </Typography>
-                    {person.numMatches}
-                  </React.Fragment>
-                }
-              />
-            </ListItem>
-            
-            <Divider variant="inset" component="li" />
-            </List>
-            })
+  return (
+    <div>
+      {
+            PlayerList.map((person) => (
+              <List className={classes.root}>
+                <ListItem alignItems="flex-start">
+                  <ListItemAvatar>
+                    <Avatar alt={person.userID} src={person.profileSrc} />
+                  </ListItemAvatar>
+                  <ListItemText
+                    primary={person.userID}
+                    secondary={(
+                      <>
+                        <Typography
+                          component="span"
+                          variant="body2"
+                          className={person.inline}
+                          color="textPrimary"
+                        >
+                          Number of Matches
+                        </Typography>
+                        {person.numMatches}
+                      </>
+                )}
+                  />
+                </ListItem>
+
+                <Divider variant="inset" component="li" />
+              </List>
+            ))
           }
-          </div>);
+    </div>
+  );
 }
