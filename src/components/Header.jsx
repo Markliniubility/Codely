@@ -14,16 +14,13 @@ const useStyles = makeStyles((theme) => ({
     borderBottom: 'solid 1px #D0D0D0',
   },
 
-  menuButton: {
-    marginRight: theme.spacing(2),
-    textTransform: 'none',
-  },
-
   spacing: {
     flexGrow: 1,
   },
 
-  link: {
+  button: {
+    marginRight: theme.spacing(2),
+    textTransform: 'none',
     textDecoration: 'none',
     color: 'inherit',
   },
@@ -38,20 +35,12 @@ export default () => {
       className={classes.appBar}
     >
       <Toolbar variant="dense">
-        <Button
-          className={classes.menuButton}
-        >
-          <Link className={classes.link} to="/">
-            Codely
-          </Link>
+        <Button component={Link} to="/" className={classes.button}>
+          Codely
         </Button>
 
-        <Button
-          className={classes.menuButton}
-        >
-          <Link className={classes.link} to="/dashboard">
-            Dashboard
-          </Link>
+        <Button component={Link} to="/dashboard" className={classes.button}>
+          Dashboard
         </Button>
 
         <Box className={classes.spacing} />
@@ -61,9 +50,9 @@ export default () => {
         </IconButton>
 
         <Button
-          className={classes.menuButton}
+          className={classes.button}
         >
-          Zepeng Yu
+          Jeffrey Yu
         </Button>
       </Toolbar>
     </AppBar>
