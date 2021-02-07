@@ -57,7 +57,11 @@ export default function Friends() {
   return (
     <>
       <List dense className={classes.root}>
-        <ListSubheader>Friends</ListSubheader>
+        <ListSubheader className={classes.title}>
+          <Typography variant="h6">
+            Friends 👨🏼‍🤝‍👨🏻
+          </Typography>
+        </ListSubheader>
         {FriendList.map((person) => (
           <ListItem button key={person.id}>
             <ListItemAvatar>

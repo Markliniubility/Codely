@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import React, { useState } from 'react';
 import 'react-chatbox-component/dist/style.css';
 import { ChatBox } from 'react-chatbox-component';
@@ -27,7 +29,7 @@ export default function SimpleChat() {
       text: 'Greetings!',
       id: '2',
       sender: {
-        name: 'Your Oppoent',
+        name: 'Merlin',
         uid: 'user2',
         avatar: opponent,
       },

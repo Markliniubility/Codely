@@ -19,6 +19,13 @@ const useStyles = makeStyles((theme) => ({
   inline: {
     display: 'inline',
   },
+  title: {
+    fontSize: '16',
+  },
+  large: {
+    width: theme.spacing(7),
+    height: theme.spacing(7),
+  },
 }));
 
 export default function LeaderBoard() {
@@ -34,7 +41,11 @@ export default function LeaderBoard() {
   return (
     <>
       <List dense className={classes.root}>
-        <ListSubheader>Leaderboard</ListSubheader>
+        <ListSubheader className={classes.title}>
+          <Typography variant="h6">
+            Leaderboard 🏁
+          </Typography>
+        </ListSubheader>
         {PlayerList.map((person, index) => (
           <>
             <ListItem button key={person.username}>

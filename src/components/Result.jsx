@@ -1,5 +1,8 @@
+/* eslint-disable */
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import Avatar from '@material-ui/core/Avatar';
@@ -9,6 +12,8 @@ import Dialog from '@material-ui/core/Dialog';
 import Typography from '@material-ui/core/Typography';
 import { DialogContent } from '@material-ui/core';
 import LinearProgress from '@material-ui/core/LinearProgress';
+import DoneIcon from '@material-ui/icons/Done';
+
 import logo from '../img/avatar.jpg';
 import diamond from '../img/diamond.png';
 
@@ -106,12 +111,16 @@ function SimpleDialog(props) {
         <Button className={classes.button} variant="contained" onClick={handleClose} color="primary">
           Play Again
         </Button>
-        <Button className={classes.button} to="https://leetcode.com/problems/two-sum/solution" color="primary">
-          View Solution
-        </Button>
-        <Button className={classes.button} onClick={handleClose} color="primary">
-          Back
-        </Button>
+        <Link to="/compare">
+          <Button className={classes.button} variant="contained" color="primary">
+            Compare Solutions
+          </Button>
+        </Link>
+        <Link to="/solution">
+          <Button className={classes.button} variant="contained" color="primary">
+            View Answer
+          </Button>
+        </Link>
       </DialogActions>
     </Dialog>
   );
@@ -145,8 +154,12 @@ export default function SimpleDialogDemo() {
 
   return (
     <div>
-      <Button variant="outlined" color="primary" onClick={handleClickOpen}>
-        Submit Your Answer
+      <Button 
+        variant="contained"
+        onClick={handleClickOpen}
+        endIcon={<DoneIcon />}
+        disableElevation>
+          Submit
       </Button>
       <SimpleDialog open={open} onClose={handleClose} length={length} />
     </div>

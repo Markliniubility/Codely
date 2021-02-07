@@ -49,7 +49,7 @@ Only one valid answer exists.`;
         </Box>
 
         <Typography variant="h6" paragraph>
-          Description
+          Description 💬
         </Typography>
 
         <Typography variant="body1" paragraph>
@@ -57,7 +57,7 @@ Only one valid answer exists.`;
         </Typography>
 
         <Typography variant="h6">
-          Examples
+          Examples 💯
         </Typography>
 
         <Typography variant="h6">
@@ -69,7 +69,7 @@ Only one valid answer exists.`;
         </Typography>
 
         <Typography variant="h6">
-          Constraints
+          Constraints ⛔
         </Typography>
 
         <Typography variant="h6">

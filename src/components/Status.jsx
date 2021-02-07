@@ -1,8 +1,9 @@
 /* eslint-disable */
 import React, { useState, useEffect, useRef} from 'react';
 import Typography from '@material-ui/core/Typography';
-
-import CountTo from 'react-count-to';
+import opponent from '../img/merlin.png';
+import Avatar from '@material-ui/core/Avatar';
+import Chip from '@material-ui/core/Chip';
 
 function useInterval(callback, delay) {
   const savedCallback = useRef();
@@ -35,6 +36,11 @@ export default () => {
   return (
     <div>
       <Typography variant="h6" paragraph>Peek at your opponent 👀</Typography>
+      <div style={{'display': 'inline-block', 'margin-bottom': '10px'}}>
+        <Avatar style={{'float': 'left', 'margin-right': '10px'}} src={opponent}/>
+        <Chip style={{'float': 'right', 'margin-top': '5px'}} label={'gold'} />
+        <Typography variant="h6" style={{'float': 'right', 'padding-top': '5px', 'margin-right': '10px'}}>Merlin</Typography>
+      </div>
       <Typography variant="body1" paragraph> Line written: {lineCount} </Typography>
       <Typography varaint="body1" paragraph> Tests ran: 0</Typography>
       <Typography varaint="body1" paragraph> Completed: No</Typography>

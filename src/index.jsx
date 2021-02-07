@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {
@@ -10,6 +11,7 @@ import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import MainLayout from './layouts/MainLayout';
 import Dashboard from './pages/Dashboard';
 import Contest from './pages/Contest';
+import Compare from './pages/Compare';
 
 const theme = createMuiTheme({
   palette: {
@@ -47,6 +49,13 @@ const App = () => (
             <Route path="/contest">
               <Contest />
             </Route>
+            <Route path="/compare">
+              <Compare />
+            </Route>
+            <Route path='/solution' component={() => { 
+              window.location.href = 'https://leetcode.com/problems/two-sum/solution'; 
+              return null;
+            }}/>
           </Switch>
         </MainLayout>
       </Router>
