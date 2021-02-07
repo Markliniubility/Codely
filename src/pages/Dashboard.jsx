@@ -4,6 +4,7 @@ import Container from '@material-ui/core/Container';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import LeaderBoard from '../components/LeaderBoard';
+import Friends from '../components/Friends';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -22,16 +23,16 @@ const useStyles = makeStyles((theme) => ({
 export default () => {
   const classes = useStyles();
   return (
-    <Container className={classes.root} maxWidth="lg">
+    <Container className={classes.root} maxWidth="md">
       <Grid container spacing={2}>
-        <Grid item xs={4}>
+        <Grid item xs={6}>
           <Paper variant="outlined" square className={classes.paper}>
             Match
           </Paper>
         </Grid>
-        <Grid item xs={8}>
+        <Grid item xs={6}>
           <Paper variant="outlined" square className={classes.paper}>
-            Friends
+            <Friends />
           </Paper>
         </Grid>
         <Grid item xs={12}>
