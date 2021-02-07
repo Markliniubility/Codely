@@ -2,36 +2,35 @@ About the project
 
 ## Inspiration
 
-Have you ever got EXHAUSTED from LeetCode?
-Have you ever felt extremely BORED when preparing for interviews?
-Have you ever desired to have a companion so you won’t be “tortured” by coding ALONE?
+Have you ever got EXHAUSTED from LeetCode? <br />
+Have you ever felt extremely BORED when preparing for interviews? <br />
+Have you ever desired to have a companion so you won’t be tortured by coding ALONE? <br />
 
-According to our surveys sent, almost 75% of coders find solving LeetCode problems boring when they are coding alone, and more than half of the coders have strongly wished to have a companion while coding. Thus, we created codely -  a place for coders to compete and learn while having fun with other coders.
+According to our surveys sent to 39 coders, 76% of them find solving LeetCode problems boring when they are coding alone, and more than half of the coders have strongly wished to have a companion while coding. We ourselves, who are also coders tired of solo coding, especially during quarantine where everythings has to be remote, want to make a difference. Therefore, we created codely -  a multiplayer website for coders to compete with others and learn while having fun.
 
 ## What it does
 
-Users could compete with online random coders or friends. While competing, users could interact with their opponents (emojis & chat). Coding problems are generated based on users’ rankings (we have a ranking system with five divisions). Similar to gaming platforms, users could climb the rank through matches. Apart from loving and care, we introduce competitiveness.  Apart from loving and care, we introduced competitiveness. 
+In codely, users can compete with online matched coders. Coding problems and opponents are matched based on users’ rankings (bronze -> silver -> gold -> platinum -> diamond -> master). Or, users can sent invitation links to their friends to compete together. While competing, users could see the progress made by their opponent and interact with the other side via emojis & chat. After the problem is solved, we calculate the score of solution by runtime (50%), used time (30%), and memory distributuion (20%). The person with the higher score wins the match and climb the rank. 
 
 ## How we built it
 
-We split the work and assigned them to our teammates (etc. each of us was in charge of specific web components, and some more experienced took over the layout and logistics work). And we coordinate via Github.
+Firstly, we brainstormed which React components are needed for codely.us, such as dashboard, compete page and result page. Then we split the work and assigned them to our teammates. Each of us was in charge of specific react components, and more experienced members took over the layout and logistics work. After each component is completed, the member requests pull request on our github repo, and the branch is merged after code review by at least 2 other teammates. Finally, we use Github page and Cloudflare to deploy our website.
 
 ## Challenges we ran into
 
-Quite frankly, we are new to React. But we spent a lot of time getting ourselves familiar with the new language, and walked each other through some tutorials, even prior to the event. Furthermore, due to covid and time zone issues, we worked remotely 100%. But we created our own discord channel and kept in touch with our teammates.
+
 
 ## Accomplishments that we’re proud of
 
-We’ve achieved what we planned, and we did enjoy our work atmosphere. We are a lovely team, and our team members became close friends.
+
 
 ## What we learned
 
-First time using React, our team learned how to build a web application with it. And more importantly, we honed our communication and collaboration skills. 
+
 
 ## What’s next for Codely
 
-We are planning to add backend development to our application in the near future. We want to introduce a log in/sign up system, LeetCode scraper, and other applications based on our database.
-
+We are planning to add backend to fully implement our features using node.js. We will implement user registration, LeetCode scraper, multi-language complier, etc. 
 ----------------------
 
 # Getting Started with Create React App
@@ -74,33 +73,3 @@ If you aren’t satisfied with the build tool and configuration choices, you can
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
