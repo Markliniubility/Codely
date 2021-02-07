@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import SyntaxHighlighter from 'react-syntax-highlighter';
-import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { atomOneDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import { Chip, Box } from '@material-ui/core';
 
 const useStyles = makeStyles(() => ({
@@ -62,7 +62,7 @@ Only one valid answer exists.`;
 
         <Typography variant="h6">
           {examples.map((example) => (
-            <SyntaxHighlighter style={github}>
+            <SyntaxHighlighter style={atomOneDark}>
               {example}
             </SyntaxHighlighter>
           ))}
@@ -73,7 +73,7 @@ Only one valid answer exists.`;
         </Typography>
 
         <Typography variant="h6">
-          <SyntaxHighlighter style={github}>
+          <SyntaxHighlighter style={atomOneDark}>
             {constraints}
           </SyntaxHighlighter>
         </Typography>

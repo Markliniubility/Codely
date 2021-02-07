@@ -32,13 +32,13 @@ export default () => {
     rand = Math.floor(Math.random() * (max - min + 1) + min);
     setLineCount(lineCount + 1);
   }, rand);
-  
+
   return (
     <div>
       <Typography variant="h6" paragraph>Peek at your opponent 👀</Typography>
       <div style={{'display': 'inline-block', 'margin-bottom': '10px'}}>
         <Avatar style={{'float': 'left', 'margin-right': '10px'}} src={opponent}/>
-        <Chip style={{'float': 'right', 'margin-top': '5px'}} label={'gold'} />
+        <Chip style={{'float': 'right', 'margin-top': '5px'}} label={'Gold'} />
         <Typography variant="h6" style={{'float': 'right', 'padding-top': '5px', 'margin-right': '10px'}}>Merlin</Typography>
       </div>
       <Typography variant="body1" paragraph> Line written: {lineCount} </Typography>

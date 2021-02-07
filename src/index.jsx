@@ -25,16 +25,6 @@ const theme = createMuiTheme({
       dark: '#212529',
     },
   },
-  // palette: {
-  //   primary: {
-  //     main: '#ffffff',
-  //     dark: '#212529',
-  //   },
-  //   secondary: {
-  //     main: '#495057',
-  //     dark: '#212529',
-  //   },
-  // },
 });
 
 const App = () => (
@@ -43,19 +33,15 @@ const App = () => (
       <Router>
         <MainLayout>
           <Switch>
-            <Route path="/dashboard">
-              <Dashboard />
-            </Route>
             <Route path="/contest">
               <Contest />
             </Route>
             <Route path="/compare">
               <Compare />
             </Route>
-            <Route path='/solution' component={() => { 
-              window.location.href = 'https://leetcode.com/problems/two-sum/solution'; 
-              return null;
-            }}/>
+            <Route path="/">
+              <Dashboard />
+            </Route>
           </Switch>
         </MainLayout>
       </Router>

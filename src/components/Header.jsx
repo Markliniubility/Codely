@@ -39,7 +39,7 @@ export default () => {
           Codely
         </Button>
 
-        <Button component={Link} to="/dashboard" className={classes.button}>
+        <Button component={Link} to="/" className={classes.button}>
           Dashboard
         </Button>
 
