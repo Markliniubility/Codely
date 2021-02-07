@@ -1,108 +1,87 @@
-import React from "react";
-import Box from '@material-ui/core/Box';
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemText from '@material-ui/core/ListItemText';
+import ListItemAvatar from '@material-ui/core/ListItemAvatar';
+import Avatar from '@material-ui/core/Avatar';
+import ListSubheader from '@material-ui/core/ListSubheader';
 import Typography from '@material-ui/core/Typography';
-import { makeStyles } from "@material-ui/core/styles";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
-import ListItemText from "@material-ui/core/ListItemText";
-import ListItemAvatar from "@material-ui/core/ListItemAvatar";
-import Avatar from "@material-ui/core/Avatar";
-import Button from "@material-ui/core/Button";
-import Popover from '@material-ui/core/Popover';
-import PopupState, { bindTrigger, bindPopover } from 'material-ui-popup-state';
+import Chip from '@material-ui/core/Chip';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    width: "80%",
-    backgroundColor: theme.palette.background.paper
+    width: '80%',
+    backgroundColor: theme.palette.background.paper,
   },
   inline: {
-    display: "inline"
-  }
+    display: 'inline',
+  },
 }));
 
-export default function Friends(prop) {
+export default function Friends() {
   const classes = useStyles;
   const FriendList = [
     {
-      userID: "Shuming Xu",
-      profileSrc: "../dist/",
-      rankingStat: "Diamond",
-      IDnum :"#12345"
+      username: 'Shuming Xu',
+      avatar: '../dist/',
+      ranking: 'Diamond',
+      id: '12345',
     },
     {
-      userID: "Mark Li",
-      profileSrc: "../dist/",
-      rankingStat: "Platinum",
-      IDnum :"16712"
+      username: 'Mark Li',
+      avatar: '../dist/',
+      ranking: 'Platinum',
+      id: '16712',
     },
     {
-      userID: "Jeffery Yu",
-      profileSrc: "../dist/",
-      rankingStat: "Platinum",
-      IDnum :"11235"
+      username: 'Jeffery Yu',
+      avatar: '../dist/',
+      ranking: 'Platinum',
+      IDnum: '11235',
     },
     {
-      userID: "Howard Qu",
-      profileSrc: "../dist/",
-      rankingStat: "Gold",
-      IDnum :"13315"
+      username: 'Howard Qu',
+      avatar: '../dist/',
+      ranking: 'Gold',
+      id: '13315',
     },
     {
-      userID: "Lorenzo Cao",
-      profileSrc: "../dist/",
-      rankingStat: "Silver",
-      IDnum :"280222"
-    }
+      username: 'Lorenzo Cao',
+      avatar: '../dist/',
+      ranking: 'Silver',
+      id: '28022',
+    },
   ];
 
   return (
-    <div>
-      {FriendList.map((person) => {
-        return (
-          <List className={classes.root}>
-            <ListItem alignItems="flex-start">
-              <ListItemAvatar>
-                <Avatar alt={person.userID} src={person.profileSrc} />
-              </ListItemAvatar>
-              <ListItemText
-                primary={person.userID}
-                secondary={
-                  <React.Fragment>{person.rankingStat}</React.Fragment>
-                }
-              />
-<PopupState variant="popover" popupId="demo-popup-popover">
-      {(popupState) => (
-        <div>
-          <Button
-                variant="contained"
-                color="primary"
-                {...bindTrigger(popupState)}
-              >
-                View ID
-              </Button>
-          <Popover
-            {...bindPopover(popupState)}
-            anchorOrigin={{
-              vertical: 'bottom',
-              horizontal: 'center',
-            }}
-            transformOrigin={{
-              vertical: 'top',
-              horizontal: 'center',
-            }}
-          >
-            <Box p={2}>
-              <Typography>ID: {person.IDnum}</Typography>
-            </Box>
-          </Popover>
-        </div>
-      )}
-    </PopupState>
-            </ListItem>
-          </List>
-        );
-      })}
-    </div>
+    <>
+      <List dense className={classes.root}>
+        <ListSubheader>Friends</ListSubheader>
+        {FriendList.map((person) => (
+          <ListItem>
+            <ListItemAvatar>
+              <Avatar alt={person.username} src={person.avatar} />
+            </ListItemAvatar>
+            <ListItemText
+              primary={(
+                <>
+                  <Typography
+                    component="span"
+                    variant="body2"
+                    className={classes.inline}
+                    color="textPrimary"
+                  >
+                    {person.username}
+                  </Typography>
+                </>
+              )}
+            />
+
+            <Chip label={person.ranking} />
+          </ListItem>
+        ))}
+      </List>
+    </>
   );
 }
