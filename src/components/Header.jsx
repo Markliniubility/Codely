@@ -5,9 +5,11 @@ import Box from '@material-ui/core/Box';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
+import Avatar from '@material-ui/core/Avatar';
 import IconButton from '@material-ui/core/IconButton';
 import Brightness2Icon from '@material-ui/icons/Brightness2';
 import InboxIcon from '@material-ui/icons/Inbox';
+import logo from '../img/logo.png';
 
 const useStyles = makeStyles((theme) => ({
   appBar: {
@@ -24,6 +26,11 @@ const useStyles = makeStyles((theme) => ({
     textDecoration: 'none',
     color: 'inherit',
   },
+
+  large: {
+    width: theme.spacing(5),
+    height: theme.spacing(5),
+  },
 }));
 
 export default () => {
@@ -36,7 +43,7 @@ export default () => {
     >
       <Toolbar variant="dense">
         <Button component={Link} to="/" className={classes.button}>
-          Codely
+          <Avatar alt="Remy Sharp" src={logo} className={classes.large} />
         </Button>
 
         <Button component={Link} to="/" className={classes.button}>
