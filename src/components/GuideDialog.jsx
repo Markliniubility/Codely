@@ -1,6 +1,5 @@
 import React from "react";
 import { withStyles } from "@material-ui/core/styles";
-import Button from "@material-ui/core/Button";
 import Dialog from "@material-ui/core/Dialog";
 import MuiDialogTitle from "@material-ui/core/DialogTitle";
 import MuiDialogContent from "@material-ui/core/DialogContent";
@@ -54,20 +53,13 @@ const DialogActions = withStyles((theme) => ({
 }))(MuiDialogActions);
 
 export default function CustomizedDialogs() {
-  const [open, setOpen] = React.useState(false);
-
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
+  const [open, setOpen] = React.useState(true);
   const handleClose = () => {
     setOpen(false);
   };
 
   return (
     <div>
-      <Button variant="outlined" color="black" onClick={handleClickOpen}>
-        Guide
-      </Button>
       <Dialog
         onClose={handleClose}
         aria-labelledby="customized-dialog-title"
@@ -78,15 +70,40 @@ export default function CustomizedDialogs() {
         </DialogTitle>
         <DialogContent dividers>
           <Typography gutterBottom>
-            <p><b>Welcome to codely: a site where coding becomes fun!</b></p>
+            <p>
+              <b>Welcome to codely: a site where coding becomes fun!</b>
+            </p>
           </Typography>
-          <Typography gutterBottom>Codely provides a place for coders to compete and learn while having fun with other coders! You can either:</Typography>
-          <Typography gutterBottom> 1. Compete with matched users online </Typography>
+          <Typography gutterBottom>
+            Codely provides a place for coders to compete and learn while having
+            fun with other coders! You can either:
+          </Typography>
+          <Typography gutterBottom>
+            {" "}
+            1. Compete with matched users online{" "}
+          </Typography>
           <Typography gutterBottom> 2. Compete with your friends </Typography>
-          <Typography gutterBottom> You will be ranked! The only way to climb is to win the matches!</Typography>
-          <Typography gutterBottom> There are five divisions: Bronze, Silver, Gold, Diamond, and Master. Each divison has five stars.</Typography>
-          <Typography gutterBottom> Everyone starts from zero in Bronze. To gain a star, simply win a match. And you are facing the penalty of losing one if you lose.</Typography>
-          <Typography gutterBottom> <p> <b>Go Codeliers!</b></p> </Typography>
+          <Typography gutterBottom>
+            {" "}
+            You will be ranked! The only way to climb is to win the matches!
+          </Typography>
+          <Typography gutterBottom>
+            {" "}
+            There are five divisions: Bronze, Silver, Gold, Diamond, and Master.
+            Each divison has five stars.
+          </Typography>
+          <Typography gutterBottom>
+            {" "}
+            Everyone starts from zero in Bronze. To gain a star, simply win a
+            match. And you are facing the penalty of losing one if you lose.
+          </Typography>
+          <Typography gutterBottom>
+            {" "}
+            <p>
+              {" "}
+              <b>Go Codeliers!</b>
+            </p>{" "}
+          </Typography>
         </DialogContent>
         <DialogActions></DialogActions>
       </Dialog>
