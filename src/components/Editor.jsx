@@ -8,8 +8,7 @@ import PlayArrowIcon from '@material-ui/icons/PlayArrow';
 import ReplayIcon from '@material-ui/icons/Replay';
 import ComputerIcon from '@material-ui/icons/Computer';
 import TextFieldsIcon from '@material-ui/icons/TextFields';
-
-import SimpleDialogDemo from './Result';
+import ResultDialog from './Result';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -68,11 +67,9 @@ const Console = () => {
         Run
       </Button>
 
-      <SimpleDialogDemo
-        className={classes.button}
-      >
+      <ResultDialog>
         Submit
-      </SimpleDialogDemo>
+      </ResultDialog>
     </Box>
   );
 };
