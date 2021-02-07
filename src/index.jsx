@@ -23,6 +23,16 @@ const theme = createMuiTheme({
       dark: '#212529',
     },
   },
+  // palette: {
+  //   primary: {
+  //     main: '#ffffff',
+  //     dark: '#212529',
+  //   },
+  //   secondary: {
+  //     main: '#495057',
+  //     dark: '#212529',
+  //   },
+  // },
 });
 
 const App = () => (

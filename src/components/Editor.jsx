@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
   },
   console: {
     height: '10%',
-    backgroundColor: 'gray',
+    backgroundColor: '#424242',
     paddingLeft: theme.spacing(1),
     paddingRight: theme.spacing(1),
     display: 'flex',
@@ -101,7 +101,7 @@ const twoSum = function(nums, target) {
   return (
     <Box className={classes.root}>
       <ReactEditor
-        theme="light"
+        theme="vs-dark"
         height="90%"
         language="javascript"
         loading="Loading..."
