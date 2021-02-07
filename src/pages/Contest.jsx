@@ -5,8 +5,6 @@ import Grid from '@material-ui/core/Grid';
 import Editor from '../components/Editor';
 
 import Problem from '../components/Problem';
-
-import Problem from '../components/Problem';
 import Status from '../components/Status';
 
 const useStyles = makeStyles((theme) => ({
@@ -37,7 +35,7 @@ export default () => {
       </Grid>
       <Grid item xs={2}>
         <Paper square className={classes.paper}>
-          Status
+          <Status />
         </Paper>
       </Grid>
     </Grid>
