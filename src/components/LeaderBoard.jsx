@@ -47,54 +47,52 @@ export default function LeaderBoard() {
           </Typography>
         </ListSubheader>
         {PlayerList.map((person, index) => (
-          <>
-            <ListItem button key={person.username}>
-              <ListItemIcon>
-                <Typography
-                  variant="body1"
-                  className={person.inline}
-                  color="textPrimary"
-                >
-                  {index + 1}
-                </Typography>
-              </ListItemIcon>
+          <ListItem button key={person.username}>
+            <ListItemIcon>
+              <Typography
+                variant="body1"
+                className={person.inline}
+                color="textPrimary"
+              >
+                {index + 1}
+              </Typography>
+            </ListItemIcon>
 
-              <ListItemAvatar>
-                <Avatar alt={person.username} src={person.avatar} />
-              </ListItemAvatar>
+            <ListItemAvatar>
+              <Avatar alt={person.username} src={person.avatar} />
+            </ListItemAvatar>
 
-              <ListItemText
-                primary={(
-                  <>
-                    <Typography
-                      component="span"
-                      variant="body2"
-                      className={classes.inline}
-                      color="textPrimary"
-                    >
-                      {person.username}
-                    </Typography>
-                  </>
-                )}
-              />
+            <ListItemText
+              primary={(
+                <>
+                  <Typography
+                    component="span"
+                    variant="body2"
+                    className={classes.inline}
+                    color="textPrimary"
+                  >
+                    {person.username}
+                  </Typography>
+                </>
+              )}
+            />
 
-              <ListItemSecondaryAction>
-                <Typography
-                  component="span"
-                  variant="body2"
-                  className={person.inline}
-                  color="textPrimary"
-                >
-                  Number of Matches:
-                  {' '}
-                </Typography>
-                {person.numMatches}
-                <IconButton edge="end">
-                  <PersonAddIcon />
-                </IconButton>
-              </ListItemSecondaryAction>
-            </ListItem>
-          </>
+            <ListItemSecondaryAction>
+              <Typography
+                component="span"
+                variant="body2"
+                className={person.inline}
+                color="textPrimary"
+              >
+                Number of Matches:
+                {' '}
+              </Typography>
+              {person.numMatches}
+              <IconButton edge="end">
+                <PersonAddIcon />
+              </IconButton>
+            </ListItemSecondaryAction>
+          </ListItem>
         ))}
       </List>
     </>

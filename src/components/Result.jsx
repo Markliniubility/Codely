@@ -15,7 +15,6 @@ import LinearProgress from '@material-ui/core/LinearProgress';
 import DoneIcon from '@material-ui/icons/Done';
 
 import logo from '../img/avatar.jpg';
-import diamond from '../img/diamond.png';
 
 const useStyles = makeStyles((theme) => ({
   result: {
@@ -24,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
   avatar: {
     display: 'flex',
     alignItems: 'center',
-    textAlign: 'bottom',
+    textAlign: 'center',
     '& > *': {
       margin: theme.spacing(1.5),
     },
@@ -39,6 +38,7 @@ const useStyles = makeStyles((theme) => ({
   },
   button: {
     textTransform: 'none',
+    color: 'inhert',
   },
   left: {
     display: 'flex',
@@ -85,8 +85,7 @@ function SimpleDialog(props) {
       <DialogContent className={classes.content}>
         <Typography className={classes.result} variant="h1" color="primary"> VICTORY! </Typography>
         <br />
-        <div className={classes.avatar}>
-          <Avatar className={classes.large} src={diamond} />
+        <div>
           <Typography variant="h6">
             Diamond League
           </Typography>
@@ -116,11 +115,11 @@ function SimpleDialog(props) {
             Compare Solutions
           </Button>
         </Link>
-        <Link to="/solution">
+        <a href="https://leetcode.com/problems/two-sum/solution">
           <Button className={classes.button} variant="contained" color="primary">
             View Answer
           </Button>
-        </Link>
+        </a>
       </DialogActions>
     </Dialog>
   );
@@ -133,6 +132,7 @@ SimpleDialog.propTypes = {
 };
 
 export default function SimpleDialogDemo() {
+  const classes = useStyles();
   const [open, setOpen] = React.useState(false);
   const [length, setLength] = useState(30);
 
@@ -154,11 +154,13 @@ export default function SimpleDialogDemo() {
 
   return (
     <div>
-      <Button 
+      <Button
+        className={classes.button}
         variant="contained"
         onClick={handleClickOpen}
         endIcon={<DoneIcon />}
-        disableElevation>
+        disableElevation
+      >
           Submit
       </Button>
       <SimpleDialog open={open} onClose={handleClose} length={length} />

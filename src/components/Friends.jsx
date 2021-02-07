@@ -26,31 +26,31 @@ export default function Friends() {
       username: 'Shuming Xu',
       avatar: '../dist/',
       ranking: 'Diamond',
-      id: '12345',
+      id: 12345,
     },
     {
       username: 'Mark Li',
       avatar: '../dist/',
       ranking: 'Platinum',
-      id: '16712',
+      id: 16712,
     },
     {
       username: 'Jeffery Yu',
       avatar: '../dist/',
       ranking: 'Platinum',
-      IDnum: '11235',
+      id: 11235,
     },
     {
       username: 'Howard Qu',
       avatar: '../dist/',
       ranking: 'Gold',
-      id: '13315',
+      id: 13315,
     },
     {
       username: 'Lorenzo Cao',
       avatar: '../dist/',
       ranking: 'Silver',
-      id: '28022',
+      id: 28022,
     },
   ];
 

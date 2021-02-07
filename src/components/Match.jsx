@@ -39,7 +39,7 @@ const Match = () => {
   return (
     <Box display="flex" className={classes.root}>
       <Typography variant="h6">
-        Matchmaking
+        Match 🏆
       </Typography>
 
       <Button variant="outlined" size="large" component={Link} to="/contest" className={classes.button}>

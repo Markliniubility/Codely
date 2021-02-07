@@ -25,7 +25,7 @@ export default (props) => {
   // const classes = useStyles();
   return (
     <div>
-      <div style={{'display': 'inline-block'}}>
+      <div>
         <Avatar style={{'float': 'left', 'margin-right': '10px'}} src={props.avatar} />
         <Typography variant="h5" style={{'float': 'right', 'padding-top': '5px'}}> {props.name} </Typography>
       </div>
