@@ -60,9 +60,6 @@ export default () => {
           <InboxIcon />
         </IconButton>
 
-        <IconButton>
-          {/* <Brightness2Icon /> */}
-        </IconButton>
         <Button
           className={classes.menuButton}
         >
