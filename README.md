@@ -26,11 +26,10 @@ Firstly, we brainstormed which React components are needed for codely.us, such a
 
 ## What we learned
 
-
+Due to the time constraint,  we have to identify the problems and solve them quickly for each single step during the development, which is a desirable ability to have during our later coding career. Further, through this opportunity, our skills of collaboration with other coders significantly improved. We also understood the whole process of developing something, from having the ideas in mind to actually put them in action and make them work. 
 
 ## What’s next for Codely
-
-We are planning to add backend to fully implement our features using node.js. We will implement user registration, LeetCode scraper, multi-language complier, etc. 
+  We are planning to add backend to fully implement our features using node.js. We will implement user registration, LeetCode scraper, multi-language complier, etc. 
 ----------------------
 
 # Getting Started with Create React App
