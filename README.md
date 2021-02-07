@@ -18,10 +18,11 @@ Firstly, we brainstormed which React components are needed for codely.us, such a
 
 ## Challenges we ran into
 
-
+When writting inline styles for components, we found it unorganized and hard to manage as the app scales up. By searching online, we found useStyles, a custom React hook by Material UI, which helps stores css as variables and allows us to reuse them accross various components. We taught teammates to learn this hook and reconstructed our components by switching from inline styles to useStyles.
 
 ## Accomplishments that we’re proud of
 
+Since we all think the light theme in leetcode is devastating, we want to implement dark mode in Codely. However, we found trying to change to background color of every component not efficient, we wanted to find a global solution for switching to dark mode. By searching online, we came across material ui, which provides mui theme for global dark mode. By reconstructing our app layout and inserting theme provider, we have a coding website where dark mode saves coders' eyes.
 
 
 ## What we learned
@@ -29,7 +30,8 @@ Firstly, we brainstormed which React components are needed for codely.us, such a
 Due to the time constraint,  we have to identify the problems and solve them quickly for each single step during the development, which is a desirable ability to have during our later coding career. Further, through this opportunity, our skills of collaboration with other coders significantly improved. We also understood the whole process of developing something, from having the ideas in mind to actually put them in action and make them work. 
 
 ## What’s next for Codely
-  We are planning to add backend to fully implement our features using node.js. We will implement user registration, LeetCode scraper, multi-language complier, etc. 
+We are planning to add backend to fully implement our features using node.js. We will implement user registration, LeetCode scraper, multi-language complier, etc. 
+
 ----------------------
 
 # Getting Started with Create React App
