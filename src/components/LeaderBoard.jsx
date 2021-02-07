@@ -14,7 +14,6 @@ import PersonAddIcon from '@material-ui/icons/PersonAdd';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    width: '80%',
     backgroundColor: theme.palette.background.paper,
   },
   inline: {
@@ -23,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function LeaderBoard() {
-  const classes = useStyles;
+  const classes = useStyles();
   const PlayerList = [
     { username: 'Shuming Xu', avatar: '../dist/', numMatches: 10 },
     { username: 'Mark Li', avatar: '../dist/', numMatches: 13 },
@@ -38,7 +37,7 @@ export default function LeaderBoard() {
         <ListSubheader>Leaderboard</ListSubheader>
         {PlayerList.map((person, index) => (
           <>
-            <ListItem button>
+            <ListItem button key={person.username}>
               <ListItemIcon>
                 <Typography
                   variant="body1"

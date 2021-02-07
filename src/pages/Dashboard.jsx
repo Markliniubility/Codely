@@ -5,6 +5,7 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import LeaderBoard from '../components/LeaderBoard';
 import Friends from '../components/Friends';
+import Match from '../components/Match';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -15,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
   paper: {
     padding: theme.spacing(2),
     textAlign: 'center',
-    height: '',
+    height: '100%',
     color: theme.palette.text.secondary,
   },
 }));
@@ -27,7 +28,7 @@ export default () => {
       <Grid container spacing={2}>
         <Grid item xs={6}>
           <Paper variant="outlined" square className={classes.paper}>
-            Match
+            <Match />
           </Paper>
         </Grid>
         <Grid item xs={6}>
