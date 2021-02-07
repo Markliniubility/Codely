@@ -22,7 +22,6 @@ export default () => {
   return (
     <AppBar
       elevation={0}
-      color="secondary"
       position="static"
       className={classes.appBar}
     >
