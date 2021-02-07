@@ -10,7 +10,6 @@ import { Typography } from '@material-ui/core';
 import avatar from '../img/avatar.jpg';
 import opponent from '../img/merlin.png';
 
-import Editor from '../components/Editor';
 import CompareHeader from '../components/CompareHeader';
 
 const useStyles = makeStyles((theme) => ({

@@ -23,6 +23,10 @@ const useStyles = makeStyles((theme) => ({
   title: {
     fontSize: '16',
   },
+  large: {
+    width: theme.spacing(7),
+    height: theme.spacing(7),
+  },
 }));
 
 export default function LeaderBoard() {
