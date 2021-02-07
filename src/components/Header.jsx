@@ -6,7 +6,7 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
-import Brightness2Icon from '@material-ui/icons/Brightness2';
+// import Brightness2Icon from '@material-ui/icons/Brightness2';
 import InboxIcon from '@material-ui/icons/Inbox';
 
 const useStyles = makeStyles((theme) => ({
@@ -61,7 +61,7 @@ export default () => {
         </IconButton>
 
         <IconButton>
-          <Brightness2Icon />
+          {/* <Brightness2Icon /> */}
         </IconButton>
         <Button
           className={classes.menuButton}
