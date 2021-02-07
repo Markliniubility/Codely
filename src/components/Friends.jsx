@@ -63,7 +63,7 @@ export default function Friends() {
           </Typography>
         </ListSubheader>
         {FriendList.map((person) => (
-          <ListItem>
+          <ListItem button key={person.id}>
             <ListItemAvatar>
               <Avatar alt={person.username} src={person.avatar} />
             </ListItemAvatar>

@@ -2,11 +2,19 @@
 
 import React, { useState } from 'react';
 import 'react-chatbox-component/dist/style.css';
-// import { ChatBox } from 'react-chatbox-component';
+import { ChatBox } from 'react-chatbox-component';
+import { makeStyles } from '@material-ui/core/styles';
 import avatar from '../img/avatar.jpg';
 import opponent from '../img/merlin.png';
 
+const useStyles = makeStyles(() => ({
+  chatbox: {
+    background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
+  },
+}));
+
 export default function SimpleChat() {
+  const classes = useStyles();
   const [messageList, setmessageList] = useState([
     {
       text: 'Happy Problem Solving!',
@@ -29,7 +37,6 @@ export default function SimpleChat() {
   ]);
 
   const sendMessage = (mess) => {
-    console.log(mess);
     if (mess.length > 0) {
       setmessageList((messages) => [...messages,
         {
@@ -67,12 +74,11 @@ export default function SimpleChat() {
     }, 2000);
   };
 
-  // return (
-  //   <ChatBox
-  //     messages={messageList}
-  //     onSubmit={sendMessage}
-  //   />
-  // );
-
-  return (<div></div>);
+  return (
+    <ChatBox
+      className={classes.chatbox}
+      messages={messageList}
+      onSubmit={sendMessage}
+    />
+  );
 }
