@@ -6,6 +6,7 @@ import Editor from '../components/Editor';
 
 import Problem from '../components/Problem';
 import Status from '../components/Status';
+import Chat from '../components/Chat';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -36,6 +37,7 @@ export default () => {
       <Grid item xs={2}>
         <Paper square className={classes.paper}>
           <Status />
+          <Chat />
         </Paper>
       </Grid>
     </Grid>
