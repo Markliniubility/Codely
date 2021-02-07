@@ -1,5 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import { Link } from 'react-router-dom';
 import Box from '@material-ui/core/Box';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -21,6 +22,11 @@ const useStyles = makeStyles((theme) => ({
   spacing: {
     flexGrow: 1,
   },
+
+  link: {
+    textDecoration: 'none',
+    color: 'inherit',
+  },
 }));
 
 export default () => {
@@ -28,7 +34,6 @@ export default () => {
   return (
     <AppBar
       elevation={0}
-      color="secondary"
       position="static"
       className={classes.appBar}
     >
@@ -36,13 +41,17 @@ export default () => {
         <Button
           className={classes.menuButton}
         >
-          Codely
+          <Link className={classes.link} to="/">
+            Codely
+          </Link>
         </Button>
 
         <Button
           className={classes.menuButton}
         >
-          Dashboard
+          <Link className={classes.link} to="/dashboard">
+            Dashboard
+          </Link>
         </Button>
 
         <Box className={classes.spacing} />
