@@ -6,7 +6,7 @@ Have you ever got EXHAUSTED from LeetCode? <br />
 Have you ever felt extremely BORED when preparing for interviews? <br />
 Have you ever desired to have a companion so you won’t be tortured by coding ALONE? <br />
 
-According to our surveys sent to 45 coders, 76% of them find solving LeetCode problems boring when they are coding alone, and more than half of the coders have strongly wished to have a companion while coding. We ourselves, who are also coders tired of solo coding, especially during quarantine where everythings has to be remote, want to make a difference. Therefore, we created codely -  a multiplayer website for coders to compete with others and learn while having fun.
+According to our surveys sent to 45 coders, 86% of them find solving LeetCode problems boring when they are coding alone, and more than half of the coders have strongly wished to have a companion while coding. We ourselves, who are also coders tired of solo coding, especially during quarantine where everythings has to be remote, want to make a difference. Therefore, we created codely -  a multiplayer website for coders to compete with others and learn while having fun.
 
 ## What it does
 
