@@ -41,10 +41,19 @@ export default function SimpleChat() {
         }]);
     }
     setTimeout(() => {
+      let reply = '';
+      const rand = Math.random();
+      if (rand < 0.33) {
+        reply = 'Wow!';
+      } else if (rand < 0.67) {
+        reply = 'Well Played!';
+      } else {
+        reply = 'Thanks!';
+      }
       if (mess.length > 0) {
         setmessageList((messages) => [...messages,
           {
-            text: Math.random() < 0.5 ? 'Wow!' : 'Well Played!',
+            text: reply,
             id: '2',
             sender: {
               name: 'Your Oppoent',
