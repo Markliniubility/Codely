@@ -1,8 +1,7 @@
 /* eslint-disable */
 import React, { useState, useEffect, useRef} from 'react';
 import Typography from '@material-ui/core/Typography';
-
-import CountTo from 'react-count-to';
+import opponent from '../img/merlin.png';
 
 function useInterval(callback, delay) {
   const savedCallback = useRef();
@@ -35,6 +34,7 @@ export default () => {
   return (
     <div>
       <Typography variant="h6" paragraph>Peek at your opponent 👀</Typography>
+      <Avatar src={opponent}/> Merlin
       <Typography variant="body1" paragraph> Line written: {lineCount} </Typography>
       <Typography varaint="body1" paragraph> Tests ran: 0</Typography>
       <Typography varaint="body1" paragraph> Completed: No</Typography>

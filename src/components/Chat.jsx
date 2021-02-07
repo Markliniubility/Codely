@@ -1,6 +1,8 @@
+/* eslint-disable */
+
 import React, { useState } from 'react';
 import 'react-chatbox-component/dist/style.css';
-import { ChatBox } from 'react-chatbox-component';
+// import { ChatBox } from 'react-chatbox-component';
 import avatar from '../img/avatar.jpg';
 import opponent from '../img/merlin.png';
 
@@ -19,7 +21,7 @@ export default function SimpleChat() {
       text: 'Greetings!',
       id: '2',
       sender: {
-        name: 'Your Oppoent',
+        name: 'Merlin',
         uid: 'user2',
         avatar: opponent,
       },
@@ -65,10 +67,12 @@ export default function SimpleChat() {
     }, 2000);
   };
 
-  return (
-    <ChatBox
-      messages={messageList}
-      onSubmit={sendMessage}
-    />
-  );
+  // return (
+  //   <ChatBox
+  //     messages={messageList}
+  //     onSubmit={sendMessage}
+  //   />
+  // );
+
+  return (<div></div>);
 }

@@ -1,13 +1,15 @@
+/* eslint-disable */
 import React from 'react';
 import ReactEditor from 'react-monaco-editor';
 import Box from '@material-ui/core/Box';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import PlayArrowIcon from '@material-ui/icons/PlayArrow';
-import DoneIcon from '@material-ui/icons/Done';
 import ReplayIcon from '@material-ui/icons/Replay';
 import ComputerIcon from '@material-ui/icons/Computer';
 import TextFieldsIcon from '@material-ui/icons/TextFields';
+
+import SimpleDialogDemo from './Result';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -66,19 +68,16 @@ const Console = () => {
         Run
       </Button>
 
-      <Button
+      <SimpleDialogDemo
         className={classes.button}
-        variant="contained"
-        endIcon={<DoneIcon />}
-        disableElevation
       >
         Submit
-      </Button>
+      </SimpleDialogDemo>
     </Box>
   );
 };
 
-const Editor = () => {
+const Editor = (props) => {
   const classes = useStyles();
   const options = {
     minimap: {
@@ -87,26 +86,16 @@ const Editor = () => {
     fontSize: 18,
     tabIndex: 2,
   };
-  const defaultValue = `/**
-* @param {number[]} nums
-* @param {number} target
-* @return {number[]}
-*/
-
-const twoSum = function(nums, target) {
-
-};
-`;
 
   return (
     <Box className={classes.root}>
       <ReactEditor
         theme="vs-dark"
-        height="90%"
+        height={props.height}
         language="javascript"
         loading="Loading..."
         options={options}
-        value={defaultValue}
+        value={props.value}
       />
       <Console />
     </Box>
