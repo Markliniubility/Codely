@@ -44,7 +44,7 @@ Only one valid answer exists.`;
     <Box className={classes.root}>
       <Box>
         <Box className={classes.title}>
-          <Chip className={classes.chip} label="Silver" color="primary" />
+          <Chip className={classes.chip} label="Silver" />
           <Typography variant="h5" paragraph>{title}</Typography>
         </Box>
 
