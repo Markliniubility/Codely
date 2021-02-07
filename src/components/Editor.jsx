@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
   },
   console: {
     height: '10%',
-    backgroundColor: 'white',
+    backgroundColor: 'gray',
     paddingLeft: theme.spacing(1),
     paddingRight: theme.spacing(1),
     display: 'flex',

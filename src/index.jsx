@@ -13,12 +13,13 @@ import Contest from './pages/Contest';
 
 const theme = createMuiTheme({
   palette: {
+    type: 'dark',
     primary: {
-      main: '#495057',
+      main: '#212529',
       dark: '#212529',
     },
     secondary: {
-      main: '#ffffff',
+      main: '#212529',
       dark: '#212529',
     },
   },
