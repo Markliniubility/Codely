@@ -26,12 +26,12 @@ export default () => {
   return (
     <Container className={classes.root} maxWidth="md">
       <Grid container spacing={2}>
-        <Grid item xs={6}>
+        <Grid item xs={4}>
           <Paper variant="outlined" square className={classes.paper}>
             <Match />
           </Paper>
         </Grid>
-        <Grid item xs={6}>
+        <Grid item xs={8}>
           <Paper variant="outlined" square className={classes.paper}>
             <Friends />
           </Paper>

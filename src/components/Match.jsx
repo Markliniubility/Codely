@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom';
-import { Box, Button } from '@material-ui/core';
+import { Typography, Box, Button } from '@material-ui/core';
 import GuideDialog from './GuideDialog';
 
 const useStyles = makeStyles((theme) => ({
@@ -38,6 +38,10 @@ const Match = () => {
 
   return (
     <Box display="flex" className={classes.root}>
+      <Typography variant="h6">
+        Matchmaking
+      </Typography>
+
       <Button variant="outlined" size="large" component={Link} to="/contest" className={classes.button}>
         Practice
       </Button>
@@ -52,7 +56,7 @@ const Match = () => {
         className={classes.button}
         onClick={handleClickOpen}
       >
-        Guide
+        Tutorial
       </Button>
       <GuideDialog open={open} handleClose={handleClose} />
     </Box>
