@@ -36,17 +36,17 @@ export default class Problem extends React.Component {
               <Typography style={{"font-weight": "600"}} variant="h5" paragraph>{title}</Typography>
             </div>
 
-            <Typography variant="h6" paragraph> Description </Typography>
+            <Typography variant="h6" paragraph> Description 💬</Typography>
             <Typography variant="body1" paragraph>{description}</Typography>
 
-            <Typography variant="h6"> Examples </Typography>
+            <Typography variant="h6"> Examples 💯</Typography>
             {examples.map(example => (
               <SyntaxHighlighter style={docco} customStyle={{"font-size": "14px"}}>
                 {example}
               </SyntaxHighlighter>
             ))}
 
-            <Typography variant="h6"> Constraints </Typography>
+            <Typography variant="h6"> Constraints ⛔</Typography>
             <SyntaxHighlighter style={docco} customStyle={{"font-size": "14px"}}>
               {constraints}
             </SyntaxHighlighter>
