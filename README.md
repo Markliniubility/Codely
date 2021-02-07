@@ -1,3 +1,39 @@
+About the project
+
+## Inspiration
+
+Have you ever got EXHAUSTED from LeetCode?
+Have you ever felt extremely BORED when preparing for interviews?
+Have you ever desired to have a companion so you won’t be “tortured” by coding ALONE?
+
+According to our surveys sent, almost 75% of coders find solving LeetCode problems boring when they are coding alone, and more than half of the coders have strongly wished to have a companion while coding. Thus, we created codely -  a place for coders to compete and learn while having fun with other coders.
+
+## What it does
+
+Users could compete with online random coders or friends. While competing, users could interact with their opponents (emojis & chat). Coding problems are generated based on users’ rankings (we have a ranking system with five divisions). Similar to gaming platforms, users could climb the rank through matches. Apart from loving and care, we introduce competitiveness.  Apart from loving and care, we introduced competitiveness. 
+
+## How we built it
+
+We split the work and assigned them to our teammates (etc. each of us was in charge of specific web components, and some more experienced took over the layout and logistics work). And we coordinate via Github.
+
+## Challenges we ran into
+
+Quite frankly, we are new to React. But we spent a lot of time getting ourselves familiar with the new language, and walked each other through some tutorials, even prior to the event. Furthermore, due to covid and time zone issues, we worked remotely 100%. But we created our own discord channel and kept in touch with our teammates.
+
+## Accomplishments that we’re proud of
+
+We’ve achieved what we planned, and we did enjoy our work atmosphere. We are a lovely team, and our team members became close friends.
+
+## What we learned
+
+First time using React, our team learned how to build a web application with it. And more importantly, we honed our communication and collaboration skills. 
+
+## What’s next for Codely
+
+We are planning to add backend development to our application in the near future. We want to introduce a log in/sign up system, LeetCode scraper, and other applications based on our database.
+
+----------------------
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
